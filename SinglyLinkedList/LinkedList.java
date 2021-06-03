@@ -66,6 +66,17 @@ public class LinkedList {
 
     }
 
+    public void count(){
+        
+        int count=0;
+        Node temp=head;
+        if(temp!=null){
+            temp=temp.next;
+            count++;
+        }
+        System.out.println(count);
+    }
+
     public void show(){
 
         Node node= head;
