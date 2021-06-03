@@ -9,6 +9,8 @@ public class Runner {
         list.insertAtStart(25);
         list.insertAtIndex(13, 2);
         list.deleteAt(2);
+        System.out.print("No of elements -> ");    
+        list.count();
         list.show();
         // System.out.println("Hello world");
     }

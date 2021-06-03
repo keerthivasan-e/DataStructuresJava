@@ -69,11 +69,14 @@ public class LinkedList {
     public void count(){
         
         int count=0;
-        Node temp=head;
-        if(temp!=null){
-            temp=temp.next;
+        Node node=head;
+        while(node!=null){
+            
+           // System.out.print(node.data+"->");
             count++;
+            node=node.next;
         }
+        //count++;
         System.out.println(count);
     }
 
@@ -81,7 +84,7 @@ public class LinkedList {
 
         Node node= head;
         while(node.next!=null){
-            System.out.println(node.data);
+            System.out.print(node.data+"->");
             node= node.next;
         }
         System.out.println(node.data);
