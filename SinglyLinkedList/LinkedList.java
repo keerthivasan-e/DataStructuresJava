@@ -3,10 +3,10 @@ public class LinkedList {
 
     Node head;
 
-    public void insert(int data){
+    public void insert(int data1){
 
         Node node = new Node();
-        node.data=data;
+        node.data=data1;
         node.next=null;
 
         if(head == null){
