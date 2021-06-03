@@ -3,7 +3,7 @@ public class LinkedList {
 
     Node head;
 
-    public void insert(int data1){
+    public void append(int data1){
 
         Node node = new Node();
         node.data=data1;
