@@ -3,10 +3,10 @@ public class LinkedList {
 
     Node head;
 
-    public void append(int data1){
+    public void append(int data){
 
         Node node = new Node();
-        node.data=data1;
+        node.data=data;
         node.next=null;
 
         if(head == null){
@@ -21,6 +21,49 @@ public class LinkedList {
 
             n.next=node;
         }
+    }
+
+
+    public void insertAtStart(int data){
+
+        Node node =new Node();
+        node.data=data;
+        node.next=null;
+        
+        node.next=head;
+        head=node;
+    }
+
+    public void insertAtIndex(int data, int index){
+
+        Node node =new Node();
+        node.data=data;
+        node.next=null;
+
+        if(index==0)
+            insertAtStart(data);
+        
+        else{
+                Node temp=head;
+                for(int i=0;i<index-1;++i){
+                    temp=temp.next;  
+                }
+                node.next=temp.next;
+                temp.next=node;
+        }
+    }
+
+    public void deleteAt(int index){
+
+        Node temp= head;
+        for(int i=0;i<index-1;++i){
+            temp=temp.next;  
+            
+        }
+        Node delete=temp.next;
+        temp.next=delete.next;
+        delete=null;
+
     }
 
     public void show(){
